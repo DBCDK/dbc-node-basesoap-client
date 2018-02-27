@@ -36,6 +36,6 @@
     "mocha-jenkins-reporter": "^0.1.9"
   },
   "dependencies": {
-    "soap": "^0.8.0"
+    "soap": "git+https://git@github.com:vpulim/node-soap.git#master"
   }
 }
