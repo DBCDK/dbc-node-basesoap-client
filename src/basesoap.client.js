@@ -50,6 +50,11 @@ BaseSoapClient.client = (wsdl, config, logger) => {
 
     return new Promise(function (resolve, reject) {
       let query = util._extend({}, options);
+
+      if(!client){
+        return reject('client is not initialized.')
+      }
+
       client[op](query, (err, result, raw, soapHeader) => { // eslint-disable-line
         if (logger) {
           logger.log('info', 'soap response', {
